@@ -1,0 +1,109 @@
+This is the updated code book for dataset produced by the run_analysis.R script
+
+From the original datasource (edited to reflect changes in names): 
+
+“The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals. These time domain signals were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals. Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm. 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals. 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+”
+
+The additional variables were activity, which is a factor coded for the different activities, activitylabel, which are the readable names of the coded activity, and a subject number. 
+
+The tidy_average dataset takes the average of each of the columns across the activity and the subject
+
+
+
+
+"1" "activity"
+"2" "timebodyaccelerometermean()x"
+"3" "timebodyaccelerometermean()y"
+"4" "timebodyaccelerometermean()z"
+"5" "timebodyaccelerometerstandarddeviation()()x"
+"6" "timebodyaccelerometerstandarddeviation()()y"
+"7" "timebodyaccelerometerstandarddeviation()()z"
+"8" "timegravityaccelerometermean()x"
+"9" "timegravityaccelerometermean()y"
+"10" "timegravityaccelerometermean()z"
+"11" "timegravityaccelerometerstandarddeviation()()x"
+"12" "timegravityaccelerometerstandarddeviation()()y"
+"13" "timegravityaccelerometerstandarddeviation()()z"
+"14" "timebodyaccelerometerjerkmean()x"
+"15" "timebodyaccelerometerjerkmean()y"
+"16" "timebodyaccelerometerjerkmean()z"
+"17" "timebodyaccelerometerjerkstandarddeviation()()x"
+"18" "timebodyaccelerometerjerkstandarddeviation()()y"
+"19" "timebodyaccelerometerjerkstandarddeviation()()z"
+"20" "timebodygyroscopemean()x"
+"21" "timebodygyroscopemean()y"
+"22" "timebodygyroscopemean()z"
+"23" "timebodygyroscopestandarddeviation()()x"
+"24" "timebodygyroscopestandarddeviation()()y"
+"25" "timebodygyroscopestandarddeviation()()z"
+"26" "timebodygyroscopejerkmean()x"
+"27" "timebodygyroscopejerkmean()y"
+"28" "timebodygyroscopejerkmean()z"
+"29" "timebodygyroscopejerkstandarddeviation()()x"
+"30" "timebodygyroscopejerkstandarddeviation()()y"
+"31" "timebodygyroscopejerkstandarddeviation()()z"
+"32" "timebodyaccelerometermagnitudemean()"
+"33" "timebodyaccelerometermagnitudestandarddeviation()()"
+"34" "timegravityaccelerometermagnitudemean()"
+"35" "timegravityaccelerometermagnitudestandarddeviation()()"
+"36" "timebodyaccelerometerjerkmagnitudemean()"
+"37" "timebodyaccelerometerjerkmagnitudestandarddeviation()()"
+"38" "timebodygyroscopemagnitudemean()"
+"39" "timebodygyroscopemagnitudestandarddeviation()()"
+"40" "timebodygyroscopejerkmagnitudemean()"
+"41" "timebodygyroscopejerkmagnitudestandarddeviation()()"
+"42" "fastfouriertransformbodyaccelerometermean()x"
+"43" "fastfouriertransformbodyaccelerometermean()y"
+"44" "fastfouriertransformbodyaccelerometermean()z"
+"45" "fastfouriertransformbodyaccelerometerstandarddeviation()()x"
+"46" "fastfouriertransformbodyaccelerometerstandarddeviation()()y"
+"47" "fastfouriertransformbodyaccelerometerstandarddeviation()()z"
+"48" "fastfouriertransformbodyaccelerometermeanfrequency()()x"
+"49" "fastfouriertransformbodyaccelerometermeanfrequency()()y"
+"50" "fastfouriertransformbodyaccelerometermeanfrequency()()z"
+"51" "fastfouriertransformbodyaccelerometerjerkmean()x"
+"52" "fastfouriertransformbodyaccelerometerjerkmean()y"
+"53" "fastfouriertransformbodyaccelerometerjerkmean()z"
+"54" "fastfouriertransformbodyaccelerometerjerkstandarddeviation()()x"
+"55" "fastfouriertransformbodyaccelerometerjerkstandarddeviation()()y"
+"56" "fastfouriertransformbodyaccelerometerjerkstandarddeviation()()z"
+"57" "fastfouriertransformbodyaccelerometerjerkmeanfrequency()()x"
+"58" "fastfouriertransformbodyaccelerometerjerkmeanfrequency()()y"
+"59" "fastfouriertransformbodyaccelerometerjerkmeanfrequency()()z"
+"60" "fastfouriertransformbodygyroscopemean()x"
+"61" "fastfouriertransformbodygyroscopemean()y"
+"62" "fastfouriertransformbodygyroscopemean()z"
+"63" "fastfouriertransformbodygyroscopestandarddeviation()()x"
+"64" "fastfouriertransformbodygyroscopestandarddeviation()()y"
+"65" "fastfouriertransformbodygyroscopestandarddeviation()()z"
+"66" "fastfouriertransformbodygyroscopemeanfrequency()()x"
+"67" "fastfouriertransformbodygyroscopemeanfrequency()()y"
+"68" "fastfouriertransformbodygyroscopemeanfrequency()()z"
+"69" "fastfouriertransformbodyaccelerometermagnitudemean()"
+"70" "fastfouriertransformbodyaccelerometermagnitudestandarddeviation()()"
+"71" "fastfouriertransformbodyaccelerometermagnitudemeanfrequency()()"
+"72" "fastfouriertransformbodybodyaccelerometerjerkmagnitudemean()"
+"73" "fastfouriertransformbodybodyaccelerometerjerkmagnitudestandarddeviation()()"
+"74" "fastfouriertransformbodybodyaccelerometerjerkmagnitudemeanfrequency()()"
+"75" "fastfouriertransformbodybodygyroscopemagnitudemean()"
+"76" "fastfouriertransformbodybodygyroscopemagnitudestandarddeviation()()"
+"77" "fastfouriertransformbodybodygyroscopemagnitudemeanfrequency()()"
+"78" "fastfouriertransformbodybodygyroscopejerkmagnitudemean()"
+"79" "fastfouriertransformbodybodygyroscopejerkmagnitudestandarddeviation()()"
+"80" "fastfouriertransformbodybodygyroscopejerkmagnitudemeanfrequency()()"
+"81" "subject"
+"82" "activitylabel"
